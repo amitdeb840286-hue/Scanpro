@@ -18,6 +18,9 @@ jobs:
           cache: true
       - name: Unzip project
         run: unzip -q "scanpro_step1_2 (1).zip"
+      - name: Fix localization getter
+        working-directory: scanpro
+        run: echo "nullable-getter: false" >> l10n.yaml
       - name: Create platform folders
         working-directory: scanpro
         run: flutter create --org com.example --project-name scanpro .
