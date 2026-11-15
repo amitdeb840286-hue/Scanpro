@@ -17,7 +17,7 @@ jobs:
           channel: stable
           cache: true
       - name: Unzip project
-        run: unzip -q scanpro_step1_2.zip
+        run: unzip -q "scanpro_step1_2 (1).zip"
       - name: Create platform folders
         working-directory: scanpro
         run: flutter create --org com.example --project-name scanpro .
